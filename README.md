@@ -14,8 +14,8 @@
 Accurate motion forecasting for traffic agents is crucial for ensuring the safety and efficiency of autonomous driving systems in dynamically changing environments. Mainstream methods adopt a one-query-one-trajectory paradigm, where each query corresponds to a unique trajectory for predicting multi-modal trajectories. While straightforward and effective, the absence of detailed representation of future trajectories may yield suboptimal outcomes, given that the agent states dynamically evolve over time. To address this problem, we introduce DeMo, a framework that decouples multi-modal trajectory queries into two types: mode queries capturing distinct directional intentions and state queries tracking the agent's dynamic states over time. By leveraging this format, we separately optimize the multi-modality and dynamic evolutionary properties of trajectories. Subsequently, the mode and state queries are integrated to obtain a comprehensive and detailed representation of the trajectories. To achieve these operations, we additionally introduce combined Attention and Mamba techniques for global information aggregation and state sequence modeling, leveraging their respective strengths. Extensive experiments on both the Argoverse 2 and nuScenes benchmarks demonstrate that our DeMo achieves state-of-the-art performance in motion forecasting. 
 
 ## ☕️ News
-* **`6 Feb, 2026`:** We have discovered that there are issues with the current original version of mamba installation. In the [mamba_2026](https://github.com/fudan-zvg/DeMo/tree/26_mamba) branch, we have provided a new version of the installation. The model itself has not been changed. If you cannot install mamba using this version, you can try the new version instead.
-* **`7 Dec, 2024`:** Checkout our work [RealMotion [NeurIPS 2024 Spotlight]](https://github.com/fudan-zvg/RealMotion) 🥰, which proposes a novel motion forecasting framework for continuous driving.
+* **`6 Feb, 2026`:** We have discovered that there are issues with the current original version of mamba installation. In the [mamba_2026](https://github.com/LogosIntelligenceLab/DeMo/tree/26_mamba) branch, we have provided a new version of the installation. The model itself has not been changed. If you cannot install mamba using this version, you can try the new version instead.
+* **`7 Dec, 2024`:** Checkout our work [RealMotion [NeurIPS 2024 Spotlight]](https://github.com/LogosIntelligenceLab/RealMotion) 🥰, which proposes a novel motion forecasting framework for continuous driving.
 
 ## 🎞️ Pipeline
 <div align="center">
@@ -98,7 +98,7 @@ python eval.py gpus=1 test=true
 ```
 
 ## ⭐ Results and checkpoints
-- We provide two versions of the models: `DeMo` for [DeMo](https://arxiv.org/abs/2410.05982) itself, and `DeMo+RealMotion`, which integrates [DeMo](https://arxiv.org/abs/2410.05982) with our other work, [RealMotion](https://arxiv.org/abs/2410.06007). You can select which model to use by adjusting the first 3 rows in [config.yaml](https://github.com/fudan-zvg/DeMo/blob/main/conf/config.yaml).
+- We provide two versions of the models: `DeMo` for [DeMo](https://arxiv.org/abs/2410.05982) itself, and `DeMo+RealMotion`, which integrates [DeMo](https://arxiv.org/abs/2410.05982) with our other work, [RealMotion](https://arxiv.org/abs/2410.06007). You can select which model to use by adjusting the first 3 rows in [config.yaml](https://github.com/LogosIntelligenceLab/DeMo/blob/main/conf/config.yaml).
 
 | Models | minADE1 | minFDE1 | minADE6 | minFDE6 |
 | :- | :-: | :-: | :-: | :-: |
@@ -124,4 +124,4 @@ python eval.py gpus=1 test=true
  - [VideoMamba](https://github.com/OpenGVLab/VideoMamba)
  - [Forecast-MAE](https://github.com/jchengai/forecast-mae)
  - [StreamPETR](https://github.com/exiawsh/StreamPETR)
- - [RealMotion (Ours)](https://github.com/fudan-zvg/RealMotion)
+ - [RealMotion (Ours)](https://github.com/LogosIntelligenceLab/RealMotion)
